@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS DADA YT | আল্টিমেট গেমিং হাব</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    overflow:hidden;
+    perspective:1000px;
+}
+
+/* অ্যানিমেটেড 3D গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;height:200%;
+    background:linear-gradient(45deg,#ff00cc,#3333ff,#00ffcc,#ffdd00);
+    animation:bgMove 12s linear infinite alternate;
+    z-index:-1;
+    filter:blur(100px);
+}
+
+@keyframes bgMove{
+    0%{transform:translate(0,0) rotate(0deg)}
+    50%{transform:translate(-20%,-20%) rotate(180deg)}
+    100%{transform:translate(0,0) rotate(360deg)}
+}
+
+/* ভাসমান পার্টিকেল */
+.particle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:rgba(255,255,255,0.8);
+    border-radius:50%;
+    animation:float 6s linear infinite;
+}
+@keyframes float{
+    0%{transform:translateY(0) translateX(0); opacity:1;}
+    50%{transform:translateY(-200px) translateX(50px); opacity:0.5;}
+    100%{transform:translateY(0) translateX(0); opacity:1;}
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    padding:20px;
+    animation:cardPop 1s ease-out;
+}
+
+@keyframes cardPop{
+    0%{transform:scale(0.8); opacity:0;}
+    100%{transform:scale(1); opacity:1;}
+}
+
+.card{
+    width:100%;max-width:450px;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter:blur(30px);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 0 60px rgba(0,255,255,0.7), 0 0 120px rgba(255,0,204,0.4);
+    border:2px solid rgba(255,255,255,0.1);
+    transform-style:preserve-3d;
+    animation:cardGlow 3s infinite alternate;
+}
+
+@keyframes cardGlow{
+    0%{box-shadow:0 0 50px rgba(0,255,255,0.6),0 0 100px rgba(255,0,204,0.3);}
+    100%{box-shadow:0 0 80px rgba(0,255,255,0.8),0 0 150px rgba(255,0,204,0.5);}
+}
+
+h1{
+    font-family:'Orbitron',sans-serif;
+    font-size:2rem;
+    margin-bottom:5px;
+    text-shadow:0 0 15px #00ffcc,0 0 25px #ff00cc,0 0 40px #ffffff;
+    animation:glowText 2s infinite alternate;
+}
+
+@keyframes glowText{
+    0%{text-shadow:0 0 10px #00ffcc,0 0 20px #ff00cc,0 0 30px #ffffff;}
+    100%{text-shadow:0 0 20px #00ffcc,0 0 35px #ff00cc,0 0 50px #ffffff;}
+}
+
+.live{
+    color:#00ff88;
+    font-size:0.9rem;
+    margin-bottom:20px;
+    text-shadow:0 0 8px #00ff88;
+    animation:livePulse 1.5s infinite alternate;
+}
+
+@keyframes livePulse{
+    0%{text-shadow:0 0 8px #00ff88;}
+    100%{text-shadow:0 0 15px #00ff88,0 0 20px #22ffaa;}
+}
+
+.link-button{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px;margin:12px 0;
+    border-radius:20px;
+    text-decoration:none;color:#fff;
+    position:relative;
+    overflow:hidden;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.link-button::before{
+    content:"";
+    position:absolute;
+    width:100%;height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.3),transparent);
+    transform:translateX(-100%);
+}
+
+.link-button:hover::before{
+    transform:translateX(100%);
+    transition:0.6s;
+}
+
+.link-button:hover{
+    transform:scale(1.07) rotateZ(1deg);
+    box-shadow:0 0 25px rgba(0,255,255,0.6),0 0 50px rgba(255,0,204,0.4);
+}
+
+.youtube{background:#ff0000}
+.facebook{background:#1877f2}
+.discord{background:#5865f2}
+
+button{
+    margin-top:20px;
+    padding:14px 24px;
+    background:linear-gradient(45deg,#00ffcc,#ff00cc);
+    border:none;
+    border-radius:14px;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(0,255,255,0.5),0 0 40px rgba(255,0,204,0.4);
+    transition:0.3s;
+    animation:buttonGlow 2s infinite alternate;
+}
+
+@keyframes buttonGlow{
+    0%{box-shadow:0 0 15px rgba(0,255,255,0.4),0 0 30px rgba(255,0,204,0.3);}
+    100%{box-shadow:0 0 25px rgba(0,255,255,0.7),0 0 50px rgba(255,0,204,0.5);}
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<div class="container">
+<div class="card">
+
+<h1>PS DADA YT</h1>
+<p class="live">🟢 লাইভ এখন</p>
+
+<a class="link-button youtube" href="https://www.youtube.com/@psdadayt" onclick="playClick()">
+<span>📺 ইউটিউব</span><span>সাবস্ক্রাইব</span>
+</a>
+
+<a class="link-button facebook" href="https://www.facebook.com/psdadaytlive" onclick="playClick()">
+<span>📘 ফেসবুক</span><span>ফলো করুন</span>
+</a>
+
+<a class="link-button discord" href="https://discord.com/invite/zGeGeQ7c5V" onclick="playClick()">
+<span>💬 ডিসকর্ড</span><span>যোগ দিন</span>
+</a>
+
+<button onclick="toggleLang()">🌐 ভাষা পরিবর্তন / Toggle Language</button>
+
+<script>
+function playClick(){
+ document.getElementById('clickSound').play();
+}
+
+let en=true;
+function toggleLang(){
+ const btn=document.querySelector('button');
+ if(en){
+  btn.innerText='🌐 ইংরেজি তে পরিবর্তন';
+ }else{
+  btn.innerText='🌐 ভাষা পরিবর্তন';
+ }
+ en=!en;
+}
+
+// ভাসমান পার্টিকেল তৈরি
+for(let i=0;i<30;i++){
+    const p=document.createElement('div');
+    p.classList.add('particle');
+    p.style.left=Math.random()*window.innerWidth+'px';
+    p.style.top=Math.random()*window.innerHeight+'px';
+    p.style.width=Math.random()*6+4+'px';
+    p.style.height=p.style.width;
+    p.style.animationDuration= (4+Math.random()*6)+'s';
+    document.body.appendChild(p);
+}
+</script>
+
+</div>
+</div>
+
+</body>
+</html>
