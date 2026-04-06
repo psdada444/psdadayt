@@ -1,2 +1,290 @@
+// Game Hub Configuration
+const config = {
+  isEnglish: true,
+  isMusicOn: false,
+  clickCount: 0,
+  translations: {
+    english: {
+      live: '🟢 LIVE NOW',
+      youtube: '📺 YouTube',
+      subscribe: 'Subscribe',
+      facebook: '📘 Facebook',
+      follow: 'Follow',
+      discord: '💬 Discord',
+      join: 'Join',
+      language: '🌐 Switch to Bangla',
+      musicOff: '🔊 Music',
+      musicOn: '🔇 Music'
+    },
+    bengali: {
+      live: '🟢 লাইভ এখন',
+      youtube: '📺 ইউটিউব',
+      subscribe: 'সাবস্ক্রাইব',
+      facebook: '📘 ফেসবুক',
+      follow: 'ফলো করুন',
+      discord: '💬 ডিসকর্ড',
+      join: 'যোগ দিন',
+      language: '🌐 ভাষা পরিবর্তন',
+      musicOff: '🔊 সঙ্গীত',
+      musicOn: '🔇 সঙ্গীত'
+    }
+  }
+};
 
-var _0x4a2c=["innerText","clickSound","bgMusic","musicBtn","liveText","ytText","ytBtn","fbText","fbBtn","dcText","dcBtn","langBtn"];var _0x2e1b=function(_0x4a2c,_0x2e1b){_0x4a2c=_0x4a2c-0x0;var _0x3c5a=_0x4a2c[_0x4a2c];return _0x3c5a;};(function(){var _0x2=!1;var _0x3=!0;window["EZPG"]=function(_0x1){var _0x0x4a2c=["🔇 Music","🔊 Music","🔇 \u09b8\u0999\u09cd\u0997\u09c0\u09a4","🔊 \u09b8\u0999\u09cd\u0997\u09c0\u09a4"];var _0x5=document[_0x2e1b("0x0")](_0x4a2c[2]);var _0x6=document[_0x2e1b("0x0")](_0x4a2c[3]);if(_0x3){_0x5.pause();_0x6[_0x4a2c[0]]=_0x2?_0x0x4a2c[0]:_0x0x4a2c[2];}else{_0x5.play();_0x6[_0x4a2c[0]]=_0x2?_0x0x4a2c[1]:_0x0x4a2c[3];}_0x3=!_0x3;};window["ABCD"]=function(){var _0x7=["🟢 LIVE NOW","📺 YouTube","Subscribe","📘 Facebook","Follow","💬 Discord","Join","🌐 Switch to Bangla","🟢 \u09b2\u09be\u0987\u09ad \u098f\u0996\u09a8","📺 \u0987\u0989\u099f\u09bf\u0989\u09ac","\u09b8\u09be\u09ac\u09cd\u09b8\u0995\u09cd\u09b0\u09be\u0987\u09ac","📘 \u09ab\u09c7\u09b8\u09ac\u09c1\u0995","\u09ab\u09b2\u09cb \u0995\u09b0\u09c1\u09a8","💬 \u09a1\u09bf\u09b8\u0995\u09b0\u09cd\u09a1","\u09af\u09cb\u0997 \u09a6\u09bf\u09a8","🌐 \u09ad\u09be\u09b7\u09be \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8"];if(!_0x2){document.getElementById(_0x4a2c[4])[_0x4a2c[0]]=_0x7[0];document.getElementById(_0x4a2c[5])[_0x4a2c[0]]=_0x7[1];document.getElementById(_0x4a2c[6])[_0x4a2c[0]]=_0x7[2];document.getElementById(_0x4a2c[7])[_0x4a2c[0]]=_0x7[3];document.getElementById(_0x4a2c[8])[_0x4a2c[0]]=_0x7[4];document.getElementById(_0x4a2c[9])[_0x4a2c[0]]=_0x7[5];document.getElementById(_0x4a2c[10])[_0x4a2c[0]]=_0x7[6];document.getElementById(_0x4a2c[11])[_0x4a2c[0]]=_0x7[7];document.getElementById('musicBtn')[_0x4a2c[0]]=_0x0x4a2c[1];}else{document.getElementById(_0x4a2c[4])[_0x4a2c[0]]=_0x7[8];document.getElementById(_0x4a2c[5])[_0x4a2c[0]]=_0x7[9];document.getElementById(_0x4a2c[6])[_0x4a2c[0]]=_0x7[10];document.getElementById(_0x4a2c[7])[_0x4a2c[0]]=_0x7[11];document.getElementById(_0x4a2c[8])[_0x4a2c[0]]=_0x7[12];document.getElementById(_0x4a2c[9])[_0x4a2c[0]]=_0x7[13];document.getElementById(_0x4a2c[10])[_0x4a2c[0]]=_0x7[14];document.getElementById(_0x4a2c[11])[_0x4a2c[0]]=_0x7[15];document.getElementById('musicBtn')[_0x4a2c[0]]=_0x0x4a2c[3];}_0x2=!_0x2;};for(var i=0;i<30;i++){var p=document.createElement('div');p.classList.add('particle');p.style.left=Math.random()*window.innerWidth+'px';p.style.top=Math.random()*window.innerHeight+'px';p.style.width=(4+Math.random()*6)+'px';p.style.height=p.style.width;p.style.animationDuration=(4+Math.random()*6)+'s';document.body.appendChild(p);}})();window.playClick=function(){document.getElementById('clickSound').play();};window.toggleMusic=function(){window.EZPG();};window.toggleLang=function(){window.ABCD();};
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', () => {
+  createParticles(50);
+  addHoverEffects();
+  setupEventListeners();
+  createGlitchEffect();
+});
+
+// Create floating particles
+function createParticles(count) {
+  for (let i = 0; i < count; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    const size = 4 + Math.random() * 6;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    particle.style.animationDuration = (4 + Math.random() * 6) + 's';
+    particle.style.animationDelay = Math.random() * 2 + 's';
+    document.body.appendChild(particle);
+  }
+}
+
+// Add hover effects to buttons
+function addHoverEffects() {
+  const buttons = document.querySelectorAll('.link-button, button');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+      this.style.transition = 'all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      playClick();
+    });
+    btn.addEventListener('mouseleave', function() {
+      this.style.transition = 'all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    });
+  });
+}
+
+// Setup event listeners
+function setupEventListeners() {
+  const langBtn = document.getElementById('langBtn');
+  const musicBtn = document.getElementById('musicBtn');
+  
+  if (langBtn) langBtn.addEventListener('click', toggleLanguage);
+  if (musicBtn) musicBtn.addEventListener('click', toggleMusic);
+}
+
+// Play click sound
+window.playClick = function() {
+  const clickSound = document.getElementById('clickSound');
+  if (clickSound) {
+    clickSound.currentTime = 0;
+    clickSound.play().catch(e => console.log('Audio play error:', e));
+  }
+};
+
+// Toggle music
+window.toggleMusic = function() {
+  const bgMusic = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('musicBtn');
+  
+  if (!bgMusic || !musicBtn) return;
+  
+  config.isMusicOn = !config.isMusicOn;
+  
+  if (config.isMusicOn) {
+    bgMusic.play().catch(e => console.log('Music play error:', e));
+    const text = config.isEnglish ? config.translations.english.musicOn : config.translations.bengali.musicOn;
+    musicBtn.textContent = text;
+  } else {
+    bgMusic.pause();
+    const text = config.isEnglish ? config.translations.english.musicOff : config.translations.bengali.musicOff;
+    musicBtn.textContent = text;
+  }
+};
+
+// Toggle language
+window.toggleLanguage = function() {
+  config.isEnglish = !config.isEnglish;
+  const lang = config.isEnglish ? config.translations.english : config.translations.bengali;
+  
+  document.getElementById('liveText').textContent = lang.live;
+  document.getElementById('ytText').textContent = lang.youtube;
+  document.getElementById('ytBtn').textContent = lang.subscribe;
+  document.getElementById('fbText').textContent = lang.facebook;
+  document.getElementById('fbBtn').textContent = lang.follow;
+  document.getElementById('dcText').textContent = lang.discord;
+  document.getElementById('dcBtn').textContent = lang.join;
+  document.getElementById('langBtn').textContent = lang.language;
+  document.getElementById('musicBtn').textContent = config.isMusicOn ? lang.musicOn : lang.musicOff;
+  
+  playClick();
+};
+
+// Create glitch effect
+function createGlitchEffect() {
+  const title = document.getElementById('title');
+  if (!title) return;
+  
+  setInterval(() => {
+    if (Math.random() > 0.95) {
+      title.classList.add('glitch');
+      setTimeout(() => title.classList.remove('glitch'), 100);
+    }
+  }, 1000);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'm' || event.key === 'M') toggleMusic();
+  if (event.key === 'l' || event.key === 'L') toggleLanguage();
+});
+// Game Hub Configuration
+const config = {
+  isEnglish: true,
+  isMusicOn: false,
+  clickCount: 0,
+  translations: {
+    english: {
+      live: '🟢 LIVE NOW',
+      youtube: '📺 YouTube',
+      subscribe: 'Subscribe',
+      facebook: '📘 Facebook',
+      follow: 'Follow',
+      discord: '💬 Discord',
+      join: 'Join',
+      language: '🌐 Switch to Bangla',
+      musicOff: '🔊 Music',
+      musicOn: '🔇 Music'
+    },
+    bengali: {
+      live: '🟢 লাইভ এখন',
+      youtube: '📺 ইউটিউব',
+      subscribe: 'সাবস্ক্রাইব',
+      facebook: '📘 ফেসবুক',
+      follow: 'ফলো করুন',
+      discord: '💬 ডিসকর্ড',
+      join: 'যোগ দিন',
+      language: '🌐 ভাষা পরিবর্তন',
+      musicOff: '🔊 সঙ্গীত',
+      musicOn: '🔇 সঙ্গীত'
+    }
+  }
+};
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', () => {
+  createParticles(50);
+  addHoverEffects();
+  setupEventListeners();
+  createGlitchEffect();
+});
+
+// Create floating particles
+function createParticles(count) {
+  for (let i = 0; i < count; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    const size = 4 + Math.random() * 6;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    particle.style.animationDuration = (4 + Math.random() * 6) + 's';
+    particle.style.animationDelay = Math.random() * 2 + 's';
+    document.body.appendChild(particle);
+  }
+}
+
+// Add hover effects to buttons
+function addHoverEffects() {
+  const buttons = document.querySelectorAll('.link-button, button');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+      this.style.transition = 'all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      playClick();
+    });
+    btn.addEventListener('mouseleave', function() {
+      this.style.transition = 'all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    });
+  });
+}
+
+// Setup event listeners
+function setupEventListeners() {
+  const langBtn = document.getElementById('langBtn');
+  const musicBtn = document.getElementById('musicBtn');
+  
+  if (langBtn) langBtn.addEventListener('click', toggleLanguage);
+  if (musicBtn) musicBtn.addEventListener('click', toggleMusic);
+}
+
+// Play click sound
+window.playClick = function() {
+  const clickSound = document.getElementById('clickSound');
+  if (clickSound) {
+    clickSound.currentTime = 0;
+    clickSound.play().catch(e => console.log('Audio play error:', e));
+  }
+};
+
+// Toggle music
+window.toggleMusic = function() {
+  const bgMusic = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('musicBtn');
+  
+  if (!bgMusic || !musicBtn) return;
+  
+  config.isMusicOn = !config.isMusicOn;
+  
+  if (config.isMusicOn) {
+    bgMusic.play().catch(e => console.log('Music play error:', e));
+    const text = config.isEnglish ? config.translations.english.musicOn : config.translations.bengali.musicOn;
+    musicBtn.textContent = text;
+  } else {
+    bgMusic.pause();
+    const text = config.isEnglish ? config.translations.english.musicOff : config.translations.bengali.musicOff;
+    musicBtn.textContent = text;
+  }
+};
+
+// Toggle language
+window.toggleLanguage = function() {
+  config.isEnglish = !config.isEnglish;
+  const lang = config.isEnglish ? config.translations.english : config.translations.bengali;
+  
+  document.getElementById('liveText').textContent = lang.live;
+  document.getElementById('ytText').textContent = lang.youtube;
+  document.getElementById('ytBtn').textContent = lang.subscribe;
+  document.getElementById('fbText').textContent = lang.facebook;
+  document.getElementById('fbBtn').textContent = lang.follow;
+  document.getElementById('dcText').textContent = lang.discord;
+  document.getElementById('dcBtn').textContent = lang.join;
+  document.getElementById('langBtn').textContent = lang.language;
+  document.getElementById('musicBtn').textContent = config.isMusicOn ? lang.musicOn : lang.musicOff;
+  
+  playClick();
+};
+
+// Create glitch effect
+function createGlitchEffect() {
+  const title = document.getElementById('title');
+  if (!title) return;
+  
+  setInterval(() => {
+    if (Math.random() > 0.95) {
+      title.classList.add('glitch');
+      setTimeout(() => title.classList.remove('glitch'), 100);
+    }
+  }, 1000);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'm' || event.key === 'M') toggleMusic();
+  if (event.key === 'l' || event.key === 'L') toggleLanguage();
+});
