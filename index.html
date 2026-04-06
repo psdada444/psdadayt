@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PS DADA YT - Ultimate Gaming Hub. Connect with us on YouTube, Facebook, and Discord!">
+  <title>PS DADA YT | Ultimate Gaming Hub</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Audio Elements -->
+  <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+  </audio>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Animated Background Elements -->
+    <div class="bg-elements">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="card">
+      <!-- Header Section -->
+      <header class="card-header">
+        <h1 id="title" class="title">PS DADA YT</h1>
+        <p class="live" id="liveText">🟢 লাইভ এখন</p>
+        <p class="tagline">Ultimate Gaming Hub</p>
+      </header>
+
+      <!-- Social Links Section -->
+      <section class="social-links">
+        <a class="link-button youtube" href="https://www.youtube.com/@psdadayt" target="_blank" rel="noopener">
+          <span class="label">
+            <span id="ytText">📺 ইউটিউব</span>
+          </span>
+          <span class="action" id="ytBtn">সাবস্ক্রাইব</span>
+        </a>
+
+        <a class="link-button facebook" href="https://www.facebook.com/psdadaytlive" target="_blank" rel="noopener">
+          <span class="label">
+            <span id="fbText">📘 ফেসবুক</span>
+          </span>
+          <span class="action" id="fbBtn">ফলো করুন</span>
+        </a>
+
+        <a class="link-button discord" href="https://discord.com/invite/zGeGeQ7c5V" target="_blank" rel="noopener">
+          <span class="label">
+            <span id="dcText">💬 ডিসকর্ড</span>
+          </span>
+          <span class="action" id="dcBtn">যোগ দিন</span>
+        </a>
+      </section>
+
+      <!-- Controls Section -->
+      <section class="controls">
+        <button onclick="toggleLang()" id="langBtn" class="control-btn lang-btn" title="Toggle Language">
+          🌐 <span id="langText">ভাষা পরিবর্তন</span>
+        </button>
+        <button onclick="toggleMusic()" id="musicBtn" class="control-btn music-btn" title="Toggle Background Music">
+          🔊 <span id="musicText">সঙ্গীত</span>
+        </button>
+      </section>
+
+      <!-- Footer -->
+      <footer class="card-footer">
+        <p class="copyright">© 2026 PS DADA YT</p>
+        <p class="developer">Developed by <span class="dev-name">SAHIL</span></p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
