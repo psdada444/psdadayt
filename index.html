@@ -1,82 +1,146 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PS DADA YT - Ultimate Gaming Hub. Connect with us on YouTube, Facebook, and Discord!">
-  <title>PS DADA YT | Ultimate Gaming Hub</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS DADA LIVE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWJ1NDhoa2F0d3RzYmVwdWdxNWI4ZHF6d2k2bzZheDc5dXIxajQ2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J0IH67u8dUWsj3xvGb/giphy.gif') no-repeat center/cover;
+}
+
+.container{
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:25px;
+  width:90%;
+  max-width:350px;
+  text-align:center;
+  color:white;
+  box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+.profile img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid white;
+}
+
+h1{margin-top:10px;font-size:22px;}
+.dev{font-size:13px;opacity:0.7;}
+
+.social{margin-top:18px;}
+.social a{
+  font-size:26px;
+  margin:10px;
+  color:white;
+  transition:0.3s;
+}
+
+.fb:hover{color:#1877f2;}
+.yt:hover{color:#ff0000;}
+.ig:hover{color:#e1306c;}
+.dc:hover{color:#5865f2;}
+
+.volume{margin-top:12px;}
+.volume input{width:100%;}
+
+.lang{margin-top:12px;}
+button{
+  padding:5px 10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+@media(max-width:480px){
+  h1{font-size:18px;}
+  .social a{font-size:22px;margin:8px;}
+}
+</style>
 </head>
 
 <body>
-  <!-- Audio Elements -->
-  <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
-  <audio id="bgMusic" autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-  </audio>
 
-  <!-- Main Container -->
-  <div class="container">
-    <!-- Animated Background Elements -->
-    <div class="bg-elements">
-      <div class="glow-orb orb-1"></div>
-      <div class="glow-orb orb-2"></div>
-      <div class="glow-orb orb-3"></div>
-    </div>
+<div class="container">
 
-    <!-- Main Card -->
-    <div class="card">
-      <!-- Header Section -->
-      <header class="card-header">
-        <h1 id="title" class="title">PS DADA YT</h1>
-        <p class="live" id="liveText">🟢 লাইভ এখন</p>
-        <p class="tagline">Ultimate Gaming Hub</p>
-      </header>
-
-      <!-- Social Links Section -->
-      <section class="social-links">
-        <a class="link-button youtube" href="https://www.youtube.com/@psdadalive1" target="_blank" rel="noopener">
-          <span class="label">
-            <span id="ytText">📺 ইউটিউব</span>
-          </span>
-          <span class="action" id="ytBtn">সাবস্ক্রাইব</span>
-        </a>
-
-        <a class="link-button facebook" href="https://www.facebook.com/psdadalive" target="_blank" rel="noopener">
-          <span class="label">
-            <span id="fbText">📘 ফেসবুক</span>
-          </span>
-          <span class="action" id="fbBtn">ফলো করুন</span>
-        </a>
-
-        <a class="link-button discord" href="https://discord.com/invite/zGeGeQ7c5V" target="_blank" rel="noopener">
-          <span class="label">
-            <span id="dcText">💬 ডিসকর্ড</span>
-          </span>
-          <span class="action" id="dcBtn">যোগ দিন</span>
-        </a>
-      </section>
-
-      <!-- Controls Section -->
-      <section class="controls">
-        <button onclick="toggleLang()" id="langBtn" class="control-btn lang-btn" title="Toggle Language">
-          🌐 <span id="langText">ভাষা পরিবর্তন</span>
-        </button>
-        <button onclick="toggleMusic()" id="musicBtn" class="control-btn music-btn" title="Toggle Background Music">
-          🔊 <span id="musicText">সঙ্গীত</span>
-        </button>
-      </section>
-
-      <!-- Footer -->
-      <footer class="card-footer">
-        <p class="copyright">© 2026 PS DADA YT</p>
-        <p class="developer">Developed by <span class="dev-name">SAHIL</span></p>
-      </footer>
-    </div>
+  <!-- Profile Image -->
+  <div class="profile">
+    <img src="https://cdn.discordapp.com/attachments/1482998403871936634/1483000051495342221/PSDADA_444.png?ex=6a1d30ed&is=6a1bdf6d&hm=11ef5261d9e763dd6f18031032dc67cbdcb7a035aaef38c94e376c54e49924d2&">
   </div>
 
-  <script src="script.js"></script>
+  <h1 id="title">PS DADA LIVE</h1>
+  <p class="dev" id="dev">Developer: PS DADA 444</p>
+
+  <!-- Social Icons -->
+  <div class="social">
+    <a href="https://facebook.com/yourprofile" target="_blank" class="fb"><i class="fab fa-facebook"></i></a>
+    <a href="https://youtube.com/@yourchannel" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
+    <a href="https://instagram.com/yourprofile" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
+    <a href="https://discord.gg/yourserver" target="_blank" class="dc"><i class="fab fa-discord"></i></a>
+  </div>
+
+  <!-- Music -->
+  <audio id="audio" autoplay loop muted>
+    <source src="https://cdn.discordapp.com/attachments/1482998403871936634/1510340253762850836/YTDown_YouTube_WUYS-GOAT_Media_gMOFL3Ym_jg_001_1080p.mp3?ex=6a1d1e39&is=6a1bccb9&hm=5dcb2eb0d5daae0ed063bc90dcfb5fc98d43e750eda48bda08ad25d7e8838e8e&">
+  </audio>
+
+  <!-- Volume Control -->
+  <div class="volume">
+    🔊 <input type="range" min="0" max="1" step="0.05" value="0.7" oninput="setVolume(this.value)">
+  </div>
+
+  <!-- Language -->
+  <div class="lang">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('bn')">BN</button>
+  </div>
+
+</div>
+
+<script>
+const audio = document.getElementById("audio");
+
+/* Auto Play Fix */
+window.onload = () => {
+  audio.volume = 0.7;
+  audio.muted = false;
+  audio.play().catch(() => {
+    document.body.addEventListener('click', () => {
+      audio.play();
+    }, {once:true});
+  });
+}
+
+/* Volume */
+function setVolume(val){
+  audio.volume = val;
+}
+
+/* Language */
+function setLang(lang){
+  if(lang === 'bn'){
+    title.innerText="পিএস দাদা লাইভ";
+    dev.innerText="ডেভেলপার: পিএস দাদা 444";
+  }else{
+    title.innerText="PS DADA LIVE";
+    dev.innerText="Developer: PS DADA 444";
+  }
+}
+</script>
+
 </body>
 </html>
